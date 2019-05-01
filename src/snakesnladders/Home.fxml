@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="snakesnladders.FXMLDocumentController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" onMouseEntered="#mouseEnter3" pickOnBounds="true">
+         <image>
+            <Image url="@../images/home-screen.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="back" fitHeight="69.0" fitWidth="81.0" layoutX="698.0" layoutY="511.0" onMouseClicked="#exitGame" onMouseEntered="#mouseEnter2" onMouseExited="#mouseExit2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/PNGPIX-COM-Wood-Arrow-Sign-PNG-Transparent-Image.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="start" fitHeight="58.0" fitWidth="307.0" layoutX="447.0" layoutY="310.0" onMouseClicked="#player" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/start-btn.png" />
+         </image>
+         <effect>
+            <DropShadow color="#035e22" spread="0.24" />
+         </effect>
+      </ImageView>
+   </children>
+</AnchorPane>

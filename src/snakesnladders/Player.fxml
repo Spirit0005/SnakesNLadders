@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="snakesnladders.FXMLDocumentController">
+   <children>
+      <ImageView fitHeight="350.0" fitWidth="400.0" opacity="0.7" pickOnBounds="true">
+         <image>
+            <Image url="@../images/screen.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <JFXTextField fx:id="t1" focusColor="#69a185" labelFloat="true" layoutX="44.0" layoutY="67.0" prefHeight="42.0" prefWidth="134.0" promptText="Player 1 name " unFocusColor="#024d1e">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="15.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="0.7" />
+         </effect></JFXTextField>
+      <Label layoutX="27.0" layoutY="88.0" textFill="WHITE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#030000" height="19.39" radius="8.055" spread="0.53" width="14.83" />
+         </effect>
+         <font>
+            <Font name="Lucida Handwriting Italic" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="t2" focusColor="#69a185" labelFloat="true" layoutX="229.0" layoutY="67.0" prefHeight="42.0" prefWidth="127.0" promptText="Player 2 name" unFocusColor="#024d1e">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="15.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="0.7" />
+         </effect></JFXTextField>
+      <Label layoutX="151.0" layoutY="135.0" text="Choose Level :" textFill="WHITE">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow height="23.97" radius="10.7425" spread="0.42" />
+         </effect>
+      </Label>
+      <ImageView fx:id="lv1" fitHeight="86.0" fitWidth="99.0" layoutX="32.0" layoutY="189.0" onMouseClicked="#level1" onMouseEntered="#mouseEnterLv1" onMouseExited="#mouseExitLv1" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/level1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lv3" fitHeight="86.0" fitWidth="99.0" layoutX="282.0" layoutY="189.0" onMouseClicked="#level3" onMouseEntered="#mouseEnterLv3" onMouseExited="#mouseExitLv3" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/level3.jpg" />
+         </image></ImageView>
+      <ImageView fx:id="lv2" fitHeight="86.0" fitWidth="99.0" layoutX="158.0" layoutY="189.0" onMouseClicked="#level2" onMouseEntered="#mouseEnterLv2" onMouseExited="#mouseExitLv2" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/level2.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lvl3" layoutX="294.0" layoutY="303.0" text="Star Wars" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="12.0" />
+         </font></Label>
+      <Label fx:id="lvl2" layoutX="164.0" layoutY="303.0" text="The Twister" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lvl1" layoutX="32.0" layoutY="303.0" text="WonderLand" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

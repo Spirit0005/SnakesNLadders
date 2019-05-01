@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="snakesnladders.FXMLDocumentController">
+   <children>
+      <ImageView fx:id="game" fitHeight="600.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/level2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="600.0" fitWidth="200.0" layoutX="600.0" pickOnBounds="true">
+         <effect>
+            <DropShadow />
+         </effect>
+         <image>
+            <Image url="@../images/51345-space-abstract-space_art.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="121.0" fitWidth="200.0" layoutX="596.0" layoutY="26.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/title.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.29" contrast="0.21" hue="-0.7" saturation="-0.42" />
+         </effect>
+      </ImageView>
+      <Label fx:id="score2" layoutX="663.0" layoutY="519.0" opacity="0.72" prefHeight="41.0" prefWidth="52.0" text="1" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="30.0" />
+         </font>
+         <effect>
+            <Glow level="0.39" />
+         </effect>
+      </Label>
+      <Label fx:id="score1" layoutX="663.0" layoutY="426.0" opacity="0.72" prefHeight="41.0" prefWidth="52.0" text="1" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="30.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Label fx:id="player2" layoutX="639.0" layoutY="462.0" prefHeight="57.0" prefWidth="125.0" text="Player 2" textFill="WHITE">
+         <effect>
+            <DropShadow color="#aca9ff" height="53.37" radius="21.737499999999997" spread="0.8" width="35.58" />
+         </effect>
+         <font>
+            <Font name="Lucida Handwriting Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="player1" layoutX="639.0" layoutY="376.0" prefHeight="50.0" prefWidth="125.0" text="Player 1" textFill="WHITE">
+         <effect>
+            <DropShadow color="#aca9ff" height="53.37" radius="21.737499999999997" spread="0.79" width="35.58" />
+         </effect>
+         <font>
+            <Font name="Lucida Handwriting Italic" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="dice" fitHeight="42.0" fitWidth="52.0" layoutX="666.0" layoutY="240.0" onMouseClicked="#rollDice" onMouseEntered="#mouseEnter1" onMouseExited="#mouseExit1" pickOnBounds="true">
+         <image>
+            <Image url="@../images/PlaintiveDemandingAnura-size_restricted.gif" />
+         </image>
+         <effect>
+            <Glow level="0.23">
+               <input>
+                  <DropShadow color="WHITE" height="18.03" radius="7.032500000000001" spread="0.91" width="12.1" />
+               </input>
+            </Glow>
+         </effect>
+      </ImageView>
+      <GridPane fx:id="grid" onMouseEntered="#setName" prefHeight="600.0" prefWidth="600.0">
+         <children>
+            <ImageView fx:id="p2" fitHeight="59.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="9">
+               <effect>
+                  <ColorAdjust brightness="1.0" contrast="-1.0" hue="1.0" saturation="-1.0" />
+               </effect>
+               <image>
+                  <Image url="@../images/177884_chrome_256x256.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="p1" fitHeight="59.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="9">
+               <image>
+                  <Image url="@../images/177884_chrome_256x256.png" />
+               </image>
+            </ImageView>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <JFXButton fx:id="move" buttonType="RAISED" layoutX="647.0" layoutY="323.0" onMouseClicked="#movePiece" style="-fx-background-color: #b8b5e0;" text="Move Piece">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow color="#e3e0f8" spread="0.73" />
+         </effect>
+      </JFXButton>
+      <Label fx:id="roll" layoutX="656.0" layoutY="293.0" textFill="WHITE">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="l1" layoutX="682.0" layoutY="204.0" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="turn" fitHeight="29.0" fitWidth="28.0" layoutX="615.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <ColorAdjust contrast="0.12" hue="0.09" saturation="0.19" />
+         </effect>
+         <image>
+            <Image url="@../images/275104-arrows7.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="back" fitHeight="42.0" fitWidth="59.0" layoutX="732.0" layoutY="555.0" onMouseClicked="#home" onMouseEntered="#mouseEnter2" onMouseExited="#mouseExit2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/PNGPIX-COM-Arrow-Transparent-PNG-Image-2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="win1" fitHeight="280.0" fitWidth="502.0" layoutX="73.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <effect>
+            <DropShadow height="201.87" radius="92.22" spread="0.47" width="169.01" />
+         </effect>
+         <image>
+            <Image url="@../images/winner-ata-translate.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="win2" fill="#363232" layoutX="205.0" layoutY="382.0" stroke="WHITE" strokeType="OUTSIDE" text="Eleven" visible="false">
+         <effect>
+            <DropShadow color="WHITE" height="118.85" radius="67.0775" spread="0.33" width="151.46" />
+         </effect>
+         <font>
+            <Font name="Showcard Gothic" size="59.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
